@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import PopupWithForm from "./PopupWithForm";
-
 import { CurrentUserContext } from "./CurrentUserContext";
 
 function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
@@ -57,7 +56,5 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
     </PopupWithForm>
   )
 }
-
-
 
 export default EditProfilePopup;
