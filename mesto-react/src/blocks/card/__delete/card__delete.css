@@ -1,5 +1,4 @@
 .card__delete {
-  display: none;
   position: absolute;
   background-image: url(../../../images/trash.svg);
   top: 18px;
@@ -16,11 +15,7 @@
   z-index: 0;
 }
 
-.card__delete.visible {
-  display: block;
-}
-
-.card__delete.visible:hover {
+.card__delete:hover {
   opacity: 0.6;
   cursor: pointer;
 }
