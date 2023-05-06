@@ -87,8 +87,23 @@ class Api {
       .then(res => this._checkResponse(res))
   }
 
+  changeLikeStatus(cardId, isLiked) {
+    if (isLiked) {
+      return fetch(`${this._url}/cards/${cardId}/likes`, {
+        method: 'DELETE',
+        headers: this._headers,
+      })
+        .then(res => this._checkResponse(res))
+    } else {
+      return fetch(`${this._url}/cards/${cardId}/likes`, {
+        method: 'PUT',
+        headers: this._headers,
+      })
+        .then(res => this._checkResponse(res))
+    }
+  }
   // Отправка лайка на сервер 
-  putCardLike(cardId) {
+  /**putCardLike(cardId) {
     return fetch(`${this._url}/cards/${cardId}/likes`, {
       method: 'PUT',
       headers: this._headers,
@@ -104,7 +119,7 @@ class Api {
     })
       .then(res => this._checkResponse(res))
   }
-
+*/
 }
 
 export const api = new Api(apiConfig);

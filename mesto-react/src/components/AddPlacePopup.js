@@ -8,7 +8,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
   function handleSubmit(e) {
     e.preventDefault();
     onAddPlace({
-      name: placeName,
+      title: placeName,
       link: placeLink,
     });
   }
