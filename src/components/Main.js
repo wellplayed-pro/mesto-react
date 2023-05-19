@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Card from "./Card";
-import { CurrentUserContext } from "./CurrentUserContext";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 
 export default function Main({
@@ -42,3 +42,4 @@ export default function Main({
       </main>
     )
 }
+
